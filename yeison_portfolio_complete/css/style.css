@@ -1,0 +1,318 @@
+/*
+ * Global styles for Yeison Luciano's portfolio
+ *
+ * This stylesheet defines a dark, modern theme with vibrant
+ * purple accents. Sections are laid out with generous white
+ * space and subtle hover effects to invite exploration. The
+ * design scales gracefully across devices, ensuring a polished
+ * experience on desktop and mobile alike.
+ */
+
+/* Reset and base typography */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(180deg, #070a23 0%, #0d1544 100%);
+  color: #d6d6e7;
+  line-height: 1.6;
+}
+
+/* Colour palette */
+:root {
+  --color-accent: #a855f7;
+  --color-accent-light: #c084fc;
+  --color-bg: #070a23;
+  --color-bg-card: #11163a;
+  --color-text: #d6d6e7;
+  --color-muted: #999ac6;
+}
+
+/* Navigation bar */
+nav {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: rgba(7, 10, 35, 0.9);
+  backdrop-filter: blur(8px);
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+nav .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.8rem 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .logo {
+  font-weight: 600;
+  font-size: 1.4rem;
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+nav ul li a {
+  color: var(--color-text);
+  text-decoration: none;
+  padding: 0.4rem 0.6rem;
+  border-radius: 4px;
+  transition: background 0.3s, color 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  background: var(--color-accent);
+  color: #fff;
+}
+
+/* Hero section */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 1.2rem 2rem 1.2rem;
+}
+
+.hero .hero-text {
+  flex: 1;
+  min-width: 280px;
+  margin-right: 2rem;
+}
+
+.hero .hero-text h1 {
+  font-size: 2.6rem;
+  color: #fff;
+  margin-bottom: 0.6rem;
+  font-weight: 700;
+}
+
+.hero .hero-text h2 {
+  font-size: 1.6rem;
+  color: var(--color-accent);
+  margin-bottom: 1rem;
+}
+
+.hero .hero-text p {
+  max-width: 500px;
+  margin-bottom: 1.6rem;
+  font-size: 1rem;
+}
+
+.hero .hero-animation {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero img {
+  width: 320px;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid var(--color-accent);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Section headings */
+section {
+  padding: 4rem 1.2rem 2rem 1.2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+section h2 {
+  font-size: 2.2rem;
+  color: var(--color-accent);
+  margin-bottom: 1.2rem;
+  text-align: center;
+}
+
+/* About section */
+.about p {
+  margin-bottom: 1rem;
+  max-width: 900px;
+}
+
+/* Experience & Certifications grid */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: var(--color-bg-card);
+  border: 1px solid #2e3371;
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+  min-height: 160px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.6rem;
+  color: var(--color-accent);
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: var(--color-text);
+}
+
+.card a {
+  margin-top: 1rem;
+  color: var(--color-accent-light);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.card a:hover {
+  text-decoration: underline;
+}
+
+/* Detail pages */
+.detail-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.detail-header h1 {
+  font-size: 2.4rem;
+  color: #fff;
+  margin-bottom: 0.4rem;
+}
+
+.detail-header p {
+  font-size: 1.1rem;
+  color: var(--color-accent);
+}
+
+.detail-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.detail-content p {
+  margin-bottom: 1rem;
+}
+
+.detail-content ul {
+  margin-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.detail-content ul li {
+  margin-bottom: 0.5rem;
+  position: relative;
+  padding-left: 1.3rem;
+}
+
+.detail-content ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--color-accent);
+}
+
+/* Tools table */
+.tools-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2rem;
+}
+
+.tools-table th,
+.tools-table td {
+  border: 1px solid #2e3371;
+  padding: 0.8rem;
+  text-align: left;
+}
+
+.tools-table th {
+  background: var(--color-bg-card);
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+.tools-table tr:nth-child(even) {
+  background: #0b1040;
+}
+
+/* Contact section */
+.contact-info {
+  text-align: center;
+  line-height: 1.8;
+}
+
+.contact-info a {
+  color: var(--color-accent-light);
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  background: #06091f;
+  color: var(--color-muted);
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.85rem;
+}
+
+/* Gradient text utility */
+.gradient-text {
+  background: linear-gradient(45deg, #a855f7, #e05c7d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero .hero-text {
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
+  .hero .hero-animation {
+    margin-top: -1rem;
+  }
+}
